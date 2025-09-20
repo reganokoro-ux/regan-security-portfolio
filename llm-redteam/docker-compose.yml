@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    mem_limit: 600m
+    cpus: 0.5
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=development
